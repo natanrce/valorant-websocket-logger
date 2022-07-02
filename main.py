@@ -39,7 +39,14 @@ def main():
             lines = file.read()
             data = lines.split(':')
             
-            keys = ['name', 'PID', 'port', 'password', 'protocol']
+            keys = [
+                'name', 
+                'PID', 
+                'port', 
+                'password', 
+                'protocol'
+            ]
+
             lockfile = dict(zip(keys, data))
     except:
         print('No lockfile found')
